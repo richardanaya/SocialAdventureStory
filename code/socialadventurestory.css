@@ -1,0 +1,12 @@
+html body {
+    background-color: black;
+}
+
+.pageStats {
+    font-style: italic;
+    color: #999;
+}
+
+.pageAuthor {
+    color: #999;
+}
