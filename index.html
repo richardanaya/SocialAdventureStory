@@ -1,5 +1,13 @@
+<!--
+    HI THERE!
+
+    Welcome to Social Adventure Story. A system made to make it easy for you to make great interactive stories.
+    Take a breath! This file may look complicated, but its actually alot easier than it seems.
+    Scroll down until you see some text that looks like its talking about a book.  Try to figure it out.
+
+    IGNORE THIS BELOW! =]
+-->
 <!DOCTYPE html>
-<!-- YOU SHOULD BE LOOKING AT book.js -->
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -9,11 +17,63 @@
     <link rel="stylesheet" href="code/socialadventurestory.css"/>
     <script src="code/jquery-1.7.1.min.js"></script>
     <script src="code/jquery.mobile-1.0.1.min.js"></script>
-    <script src="book.js"></script>
     <script src="code/socialadventurestory.js"></script>
 </head>
-<body></body>
+<body>
+<!-- IGNORE THIS ABOVE! =] -->
+
+
+
+<book>
+   <title>A Dark and Stormy Night</title>
+   <author>Richard</author>
+   <pages>
+       <page name="COVER">
+           <text>
+               <center><b>A DARK AND STORMY NIGHT</b></center>
+               <br>Some storms are just a storm.
+               Some creeks in the middle of the night are just a creek. But those few times they are not ...
+               are the stuff of nightmares.
+           </text>
+           <action page="1"><text>READ</text></action>
+           <action page="CREDITS"><text>CREDITS</text></action>
+       </page>
+
+       <page name="CREDITS">
+           <text>Richard - For inspiration and dreaming.</text>
+           <action page="COVER"><text>BACK</text></action>
+       </page>
+
+       <page name="1">
+           <text>You are in a dark room.</text>
+           <action page="2"><text>Do nothing.</text></action>
+           <action page="3"><text>Open the door</text></action>
+       </page>
+
+       <page name="2">
+           <text>You sit lathargically at your computer till you die. The End.</text>
+           <action page="1"><text>READ AGAIN</text></action>
+       </page>
+
+       <page name="3">
+           <text>
+               You walk outside, an the planet explodes. Better luck next time.<br><br>
+               <center><img src="images/octupus.png" width="90%"></center><br><br>
+               <center>THE END</center>
+           </text>
+           <action page="1"><text>READ AGAIN</text></action>
+       </page>
+   </pages>
+</book>
+
+
+
+<!-- IGNORE THIS BELOW! =] -->
+</body>
 <script>
-    SocialAdventureStory.createBook(book);
+    var parsedBook = SocialAdventureStory.parseBook();
+        SocialAdventureStory.createBook(parsedBook);
 </script>
 </html>
+
+

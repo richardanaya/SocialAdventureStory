@@ -10,3 +10,7 @@ html body {
 .pageAuthor {
     color: #999;
 }
+
+book {
+    display: none;
+}
